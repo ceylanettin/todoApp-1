@@ -23,11 +23,12 @@ $musteri1 = array(
     )
 );
 
+//diziyi objeye çevirir
+$oMusteri = (object)$musteri1;
+
 //müşreti adı yazdırılır
-echo $musteri1['ad'] . '<br>';
+echo $oMusteri->ad . '<br>';
+
 
 //müşteri fatura adresini yazdırma
-echo $musteri1['adres']['fatura'] . '<br>';
-
-//2. banka hesap bilgilerine ulaşma
-echo $musteri1['banka'][1]['hesapno'];
+echo $oMusteri->adres['fatura'];
